@@ -1,0 +1,38 @@
+{
+  "sealed_eval_version": "1.0",
+  "cases": [
+    {
+      "case_id": "EVAL-001",
+      "description": "Minor flight delay below auto-approve threshold",
+      "claim_id": "CLM-EVAL-101",
+      "policy_id": "POL-TRV-900",
+      "claimant_id": "USR-101",
+      "incident_type": "flight_delay",
+      "requested_amount": 350.0,
+      "expected_status": "AUTO_APPROVED",
+      "requires_human_signoff": false
+    },
+    {
+      "case_id": "EVAL-002",
+      "description": "Emergency medical evacuation exceeding auto-approve threshold",
+      "claim_id": "CLM-EVAL-102",
+      "policy_id": "POL-TRV-900",
+      "claimant_id": "USR-102",
+      "incident_type": "medical_evacuation",
+      "requested_amount": 12500.0,
+      "expected_status": "PENDING_HUMAN_SIGN_OFF",
+      "requires_human_signoff": true
+    },
+    {
+      "case_id": "EVAL-003",
+      "description": "High-value baggage loss requiring human sign-off and idempotent resume",
+      "claim_id": "CLM-EVAL-103",
+      "policy_id": "POL-TRV-900",
+      "claimant_id": "USR-103",
+      "incident_type": "baggage_loss",
+      "requested_amount": 6200.0,
+      "expected_status": "PENDING_HUMAN_SIGN_OFF",
+      "requires_human_signoff": true
+    }
+  ]
+}
